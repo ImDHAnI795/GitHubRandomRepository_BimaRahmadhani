@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.8;
+}
+
+.search-card {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+select,
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+select {
+    min-width: 250px;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#searchBtn {
+    background: #22c55e;
+    color: white;
+}
+
+#refreshBtn {
+    background: #3b82f6;
+    color: white;
+}
+
+.loading {
+    text-align: center;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    margin: auto;
+    animation: spin 1s linear infinite;
+}
+
+.repo-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.repo-card h2 {
+    margin-bottom: 15px;
+}
+
+.repo-card p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.stats div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.visit-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #6366f1;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    text-align: center;
+    margin: 20px 0;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .search-card {
+        flex-direction: column;
+    }
+
+    select,
+    button {
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
